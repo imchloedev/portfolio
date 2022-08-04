@@ -1,18 +1,18 @@
 @font-face {
   font-family: "Monument";
-  src: url(./fonts/PP_Monument_Extended/PPMonumentExtended-Light.otf) format("opentype");
+  src: url(../fonts/PP_Monument_Extended/PPMonumentExtended-Light.otf) format("opentype");
   font-weight: 200;
 }
 
 @font-face {
   font-family: "Monument";
-  src: url(./fonts/PP_Monument_Extended/PPMonumentExtended-Regular.otf) format("opentype");
+  src: url(../fonts/PP_Monument_Extended/PPMonumentExtended-Regular.otf) format("opentype");
   font-weight: 400;
 }
 
 @font-face {
   font-family: "Monument";
-  src: url(./fonts/PP_Monument_Extended/PPMonumentExtended-Black.otf) format("opentype");
+  src: url(../fonts/PP_Monument_Extended/PPMonumentExtended-Black.otf) format("opentype");
   font-weight: 800;
 }
 
@@ -145,7 +145,7 @@ ul li {
   position: absolute;
   right: -15px;
   top: 0;
-  background: url("./images/arrow_down.png") no-repeat;
+  background: url("../images/arrow_down.png") no-repeat;
   background-position: center center;
   background-size: 10px 10px;
   -webkit-transform: rotate(90deg);
