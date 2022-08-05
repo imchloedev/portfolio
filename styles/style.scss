@@ -19,6 +19,21 @@
   font-weight: 800;
 }
 
+// kr
+@font-face {
+  font-family: "Noto Sans";
+  src: url(../fonts/Noto_Sans_KR/NotoSansKR-Light.otf) format("opentype");
+  font-weight: 300;
+  unicode-range: U+AC00-D7A3;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url(../fonts/Noto_Sans_KR/NotoSansKR-Regular.otf) format("opentype");
+  font-weight: 400;
+  unicode-range: U+AC00-D7A3;
+}
+
 // window size
 
 $mobile: 1040px;
@@ -57,11 +72,23 @@ html {
 }
 
 body {
-  font-family: "Monument";
-  font-weight: 200;
+  font-family: "Monument", "Noto Sans";
+  font-weight: 340;
   color: #222;
   font-size: 16px;
   line-height: 1.3rem;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 18px;
 }
 
 a {
@@ -285,20 +312,27 @@ main {
   text-transform: uppercase;
   transform: translateY(-50%);
 
+  > * {
+    animation-name: reveal;
+    animation-timing-function: ease;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+
   h2 {
     font-size: calc(8vw - 30px);
     line-height: normal;
     font-weight: 400;
-    animation: reveal 1s ease 0.3s forwards alternate;
     opacity: 0;
+    animation-delay: 0.3s;
   }
 
   p {
     font-size: calc(8vw - 20px);
     line-height: normal;
-    animation: reveal 1s ease 0.5s forwards alternate;
-    opacity: 0;
     font-weight: 400;
+    opacity: 0;
+    animation-delay: 0.5s;
   }
 
   .name {
@@ -307,18 +341,20 @@ main {
 
   span {
     font-size: 18px;
-    animation: reveal 1s ease 0.9s forwards alternate;
     opacity: 0;
+    animation-delay: 0.8s;
   }
 }
 
 @keyframes reveal {
   0% {
     opacity: 0;
+    transform: translateY(10px);
   }
 
   100% {
     opacity: 1;
+    transform: translateY(0px);
   }
 }
 
@@ -367,3 +403,45 @@ main {
     opacity: 0;
   }
 }
+
+.about {
+  background-color: #222;
+  color: white;
+
+  .about_wrapper {
+    padding: 100px 32px;
+    text-align: center;
+  }
+}
+
+.about_text {
+  padding-bottom: 80px;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: white;
+    text-transform: uppercase;
+  }
+
+  p {
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 40px;
+  }
+
+  button {
+    color: white;
+    text-transform: uppercase;
+  }
+}
+
+.about_skill {
+  h4 {
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px white;
+  }
+}
+
+

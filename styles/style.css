@@ -16,6 +16,20 @@
   font-weight: 800;
 }
 
+@font-face {
+  font-family: "Noto Sans";
+  src: url(../fonts/Noto_Sans_KR/NotoSansKR-Light.otf) format("opentype");
+  font-weight: 300;
+  unicode-range: U+AC00-D7A3;
+}
+
+@font-face {
+  font-family: "Noto Sans";
+  src: url(../fonts/Noto_Sans_KR/NotoSansKR-Regular.otf) format("opentype");
+  font-weight: 400;
+  unicode-range: U+AC00-D7A3;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -29,11 +43,23 @@ html {
 }
 
 body {
-  font-family: "Monument";
-  font-weight: 200;
+  font-family: "Monument", "Noto Sans";
+  font-weight: 340;
   color: #222;
   font-size: 16px;
   line-height: 1.3rem;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 18px;
 }
 
 a {
@@ -272,22 +298,33 @@ main {
           transform: translateY(-50%);
 }
 
+.main_text > * {
+  -webkit-animation-name: reveal;
+          animation-name: reveal;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
 .main_text h2 {
   font-size: calc(8vw - 30px);
   line-height: normal;
   font-weight: 400;
-  -webkit-animation: reveal 1s ease 0.3s forwards alternate;
-          animation: reveal 1s ease 0.3s forwards alternate;
   opacity: 0;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
 
 .main_text p {
   font-size: calc(8vw - 20px);
   line-height: normal;
-  -webkit-animation: reveal 1s ease 0.5s forwards alternate;
-          animation: reveal 1s ease 0.5s forwards alternate;
-  opacity: 0;
   font-weight: 400;
+  opacity: 0;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
 .main_text .name {
@@ -296,26 +333,34 @@ main {
 
 .main_text span {
   font-size: 18px;
-  -webkit-animation: reveal 1s ease 0.9s forwards alternate;
-          animation: reveal 1s ease 0.9s forwards alternate;
   opacity: 0;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
 }
 
 @-webkit-keyframes reveal {
   0% {
     opacity: 0;
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
   }
   100% {
     opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
 }
 
 @keyframes reveal {
   0% {
     opacity: 0;
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
   }
   100% {
     opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
   }
 }
 
@@ -387,5 +432,43 @@ main {
   100% {
     opacity: 0;
   }
+}
+
+.about {
+  background-color: #222;
+  color: white;
+}
+
+.about .about_wrapper {
+  padding: 100px 32px;
+  text-align: center;
+}
+
+.about_text {
+  padding-bottom: 80px;
+}
+
+.about_text h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.about_text p {
+  width: 70%;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+.about_text button {
+  color: white;
+  text-transform: uppercase;
+}
+
+.about_skill h4 {
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px white;
 }
 /*# sourceMappingURL=style.css.map */
