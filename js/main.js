@@ -1,3 +1,23 @@
+// window.addEventListener("DOMContentLoaded", function () {
+//   setTimeout(() => {
+//     document.querySelector(".loader").style.display = "none";
+//     document.querySelector("body").style.overflow = "auto";
+//   }, 3000);
+// });
+
+
+
+function isLoading() {
+    setTimeout(() => {
+    document.querySelector(".loader").classList.add('remove');
+    document.querySelector("body").style.overflow = "auto";
+  }, 3000);
+}
+
+isLoading();
+
+
+
 let navBtn = document.querySelector(".nav_btn button");
 let nav = document.querySelector("nav");
 
@@ -17,9 +37,6 @@ blog.addEventListener("click", () => {
 let scrollBtn = document.querySelector(".scroll_btn");
 
 scrollBtn.addEventListener("click", () => {
-  window.scrollTo(0, about);
+  let aboutTop = document.querySelector(".about").offsetTop;
+  window.scrollTo(0, aboutTop);
 });
-
-let about = document.querySelector(".about").offsetTop;
-
-console.log(about);
