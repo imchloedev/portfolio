@@ -29,8 +29,6 @@ scrollBtn.addEventListener("click", () => {
   window.scrollTo(0, aboutTop);
 });
 
-// console.log(aboutTop);
-
 let prevScrollTop = window.pageYOffset;
 
 window.addEventListener("scroll", () => {
@@ -60,9 +58,6 @@ function scrollProgress() {
       window.scrollY ||
       window.pageYOffset) +
     window.innerHeight / 2;
-
-  // console.log(scrollTop);
-  // console.log(window.innerHeight);
 
   // content_item
   document.querySelectorAll(".content_item").forEach((el) => {
