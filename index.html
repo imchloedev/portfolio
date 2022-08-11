@@ -8,15 +8,17 @@
     />
     <title>EunjiKang</title>
     <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/general.css">
-    <link rel="stylesheet" href="./styles/font.css">
-    <link rel="stylesheet" href="./styles/responsive.css">
+    <link rel="stylesheet" href="./styles/common.css" />
+    <link rel="stylesheet" href="./styles/font.css" />
+    <link rel="stylesheet" href="./styles/responsive.css" />
     <style type="text/css"></style>
     <script defer src="./js/main.js"></script>
+    <script defer src="./js/gsap.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
   </head>
 
   <body>
-
     <div class="loader loader--style7">
       <div class="load-3">
         <p>Loading...</p>
@@ -29,23 +31,30 @@
     <header>
       <div class="header_wrapper">
         <div class="logo_box">
-          <a href="#main">EUNJI KANG</a>
+          <a href="#main" class="logoLink">EUNJI KANG</a>
         </div>
 
-        <nav>
-          <ul class="menu">
-            <li><a href="#about">About</a></li>
-            <li><a href="#">Projects</a></li>
-            <li>
-              <a href="javascript:void(0)" class="blog">Blog</a>
-              <ul class="submenu">
-                <li><a href="https://velog.io/@chloedev">Velog</a></li>
-                <li><a href="https://github.com/imchloedev">Github</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
+        <div class="nav">
+          <nav>
+            <ul>
+              <li><a href="#main">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="mNav">
+          <nav>
+            <ul>
+              <li><a href="#main">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
 
         <div class="nav_btn">
           <button>
@@ -71,42 +80,49 @@
       </div>
     </main>
 
-    <article class="about" id="about">
+    <article class="about content" id="about">
       <div class="about_wrapper">
         <section class="about_text">
+          <h2>About Me</h2>
           <div>
-            <h2>About Me</h2>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </p>
-          </div>
-          <div>
-            <button>Discover more</button>
+            <p>안녕하세요. 프론트엔드개발자 강은지입니다. <br /></p>
+            <div>
+              <img src="./images/me.png" alt="" />
+            </div>
           </div>
         </section>
 
-        <section class="about_skill">
-          <h4>Technical Skills</h4>
-          <div class="skill_wrapper">
-            <!-- <div>HTML</div>
-            <div>CSS</div>
-            <div>JavaScript</div>
-            <div>React</div>
-            <div>Next.js</div>
-            <div>PhotoShop</div>
-            <div>Illustrate</div>
-            <div>Figma</div>
-            <div>Adobe XD</div> -->
-          </div>
+        <section class="skills">
+          <h3>Skills</h3>
+          <div></div>
         </section>
       </div>
     </article>
 
-    <!-- <article class="projects">
-      <div class="projects_wrapper">hello</div>
-    </article> -->
+    <article class="projects content" id="projects">
+      <div class="projects_wrapper">
+        <h2>Projects</h2>
+        <div>
+          <section class="content_item">
+            <h3 class="numberList">01</h3>
+            <div class="project_container">
+              <a href=""> </a>
+            </div>
+          </section>
+          <section class="content_item">
+            <h3 class="numberList">02</h3>
+            <div class="project_container">
+              <a href=""> </a>
+            </div>
+          </section>
+          <section class="content_item">
+            <h3 class="numberList">03</h3>
+            <div class="project_container">
+              <a href=""> </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </article>
   </body>
 </html>
