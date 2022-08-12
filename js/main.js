@@ -26,7 +26,7 @@ document.querySelectorAll(".mNav ul li a").forEach((el) => {
   });
 });
 
-// main/scrollBtn
+// main scrollBtn
 let scrollBtn = document.querySelector(".scroll_btn");
 let aboutTop = document.querySelector(".about").offsetTop;
 
@@ -34,10 +34,12 @@ scrollBtn.addEventListener("click", () => {
   window.scrollTo(0, aboutTop);
 });
 
-// scroll event
+// header scroll event
 let prevScrollTop = window.pageYOffset;
 
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll", headerReveal);
+
+function headerReveal() {
   let currScrollTop =
     window.pageYOffset || document.documentElement.scrollTop || window.scrollY;
 
@@ -48,30 +50,18 @@ window.addEventListener("scroll", () => {
   }
 
   prevScrollTop = currScrollTop;
+}
 
-  if (currScrollTop > aboutTop - 80) {
-    document.querySelector("header").classList.add("active");
-  } else {
-    document.querySelector("header").classList.remove("active");
-  }
+// nav scroll event
 
-  if (currScrollTop > document.querySelector(".contact").offsetTop - 80) {
-    document.querySelector("header").classList.remove("active");
-  } else {
-    document.querySelector("header").classList.add("active");
-  }
+window.addEventListener("scroll", navScrollProgress);
 
-  scrollProgress();
-});
-
-function scrollProgress() {
+function navScrollProgress() {
   let scrollTop =
     (document.documentElement.scrollTop ||
       window.scrollY ||
       window.pageYOffset) +
-    window.innerHeight / 2;
-
-  // content
+    window.innerHeight / 10;
 
   document.querySelectorAll(".content").forEach((element, index) => {
     if (scrollTop >= element.offsetTop) {
@@ -91,10 +81,33 @@ function scrollProgress() {
     }
   });
 
-  // content_item
+  if (scrollTop > document.querySelector(".about").offsetTop) {
+    document.querySelector("header").classList.add("active");
+  } else {
+    document.querySelector("header").classList.remove("active");
+  }
+
+  if (scrollTop > document.querySelector(".contact").offsetTop) {
+    document.querySelector("header").classList.remove("active");
+  }
+}
+
+// project content_item
+
+window.addEventListener("scroll", projectReveal);
+
+function projectReveal() {
+  let scrollTop =
+    (document.documentElement.scrollTop ||
+      window.scrollY ||
+      window.pageYOffset) +
+    window.innerHeight / 2;
+
   document.querySelectorAll(".content_item").forEach((item) => {
     if (scrollTop > item.offsetTop) {
       item.classList.add("show");
     }
   });
 }
+
+// contact
