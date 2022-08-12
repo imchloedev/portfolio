@@ -17,6 +17,10 @@ body {
   line-height: 1.3rem;
 }
 
+body.fixed {
+  overflow-y: hidden;
+}
+
 h1 {
   font-size: 32px;
 }
@@ -63,4 +67,10 @@ ul li {
 
 img {
   width: 50px;
+}
+
+input, textarea {
+  font-family: "Object Sans";
+  outline: none;
+  background-color: transparent;
 }

@@ -92,8 +92,28 @@ header.active .nav li a {
   color: white;
 }
 
+header.active .nav li a::after {
+  content: "";
+  background-color: white;
+}
+
 nav li {
   text-transform: uppercase;
+}
+
+nav li a {
+  display: inline-block;
+  position: relative;
+}
+
+nav li.active a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  height: 1px;
 }
 
 .nav li {
@@ -107,9 +127,9 @@ nav li {
 
 main {
   width: 100%;
-  height: calc(100vh - 80px);
+  height: 100vh;
   position: relative;
-  margin-top: 80px;
+  padding-top: 80px;
 }
 
 .main_wrapper {
@@ -131,7 +151,7 @@ main {
 }
 
 .main_text h2 {
-  font-size: calc(8vw - 30px);
+  font-size: calc(6vw - 10px);
   line-height: normal;
   font-weight: 400;
   opacity: 0;
@@ -316,4 +336,76 @@ main {
   margin-top: 20px;
   padding-top: 20px;
   border-top: 0.05rem solid #c7c7c7;
+}
+
+.description_container h5 {
+  margin-bottom: 20px;
+}
+
+.description_container p {
+  font-family: "Object Sans";
+}
+
+.contact_wrapper {
+  padding: 80px 32px;
+}
+
+.contact_wrapper h2 {
+  margin-bottom: 20px;
+}
+
+.contact_wrapper p {
+  font-family: "Object Sans";
+}
+
+.form_container {
+  padding-top: 60px;
+}
+
+.form_container div:not(:last-child) {
+  padding-bottom: 30px;
+}
+
+.form_container input {
+  width: 100%;
+  border: 1px solid #848484;
+  padding: 16px 20px;
+  border-radius: 5px;
+}
+
+.form_container input::placeholder {
+  color: #888;
+}
+
+.form_container input:focus,
+.form_container textarea:focus {
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+}
+
+.cMessage textarea {
+  width: 100%;
+  resize: none;
+  padding: 16px 20px;
+  border-radius: 5px;
+}
+
+.cMessage textarea::placeholder {
+  color: #888;
+}
+
+.cSendBtn button {
+  width: 180px;
+  display: block;
+  margin: 0 auto;
+  background-color: #333;
+  padding: 16px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: white;
+  transition: 0.3s;
+}
+
+.cSendBtn button:hover {
+  color: #333;
+  background-color: #dedede;
 }

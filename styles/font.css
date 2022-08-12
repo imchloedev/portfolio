@@ -19,6 +19,12 @@
   font-weight: 800;
 }
 
+@font-face {
+  font-family: "Object Sans";
+  src: url(../fonts/PP_Object_Sans/PPObjectSans-Regular.otf) format("opentype");
+  font-weight: 315;
+}
+
 /* Korean */
 @font-face {
   font-family: "Noto Sans";

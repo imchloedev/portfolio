@@ -10,19 +10,18 @@
   }
 
   .main_text h2 {
-    font-size: 85.2px;
+    font-size: 73.94px;
   }
 
   .main_text p {
     font-size: 95.2px;
   }
 
-
   .about_wrapper {
     width: 1440px;
     margin: 0 auto;
   }
-  
+
   .projects_wrapper {
     width: 1440px;
     margin: 0 auto;
@@ -31,10 +30,14 @@
   .numberList {
     font-size: 115.2px”;
   }
+
+  .contact_wrapper {
+    width: 1440px;
+    margin: 0 auto;
+  }
+
+  
 }
-
-
-
 
 @media (min-width: 1041px) {
   .mNav {
@@ -43,6 +46,11 @@
 
   .nav_btn {
     display: none;
+  }
+
+  .form_container {
+    max-width: 580px;
+    margin: 0 auto;
   }
 }
 
@@ -126,17 +134,22 @@
   }
 
   .about_text div div {
-     display: none;
+    display: none;
+  }
+
+  .form_container {
+    max-width: 580px;
+    margin: 0 auto;
   }
 }
 
 @media (max-width: 640px) {
   .main_text h2 {
-    font-size: 20px;
+    font-size: 28.6px;
   }
 
   .main_text p {
-    font-size: 30px;
+    font-size: 31px;
   }
 
   .main_text span {

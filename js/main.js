@@ -2,7 +2,7 @@
 function isLoading() {
   setTimeout(() => {
     document.querySelector(".loader").classList.add("remove");
-    document.querySelector("body").style.overflow = "auto";
+    document.querySelector("body").classList.remove("fixed");
   }, 3000);
 }
 
@@ -15,12 +15,14 @@ let mNav = document.querySelector(".mNav");
 navBtn.addEventListener("click", () => {
   navBtn.classList.toggle("nav_btn_active");
   mNav.classList.toggle("open");
+  document.querySelector("body").classList.toggle("fixed");
 });
 
 document.querySelectorAll(".mNav ul li a").forEach((el) => {
   el.addEventListener("click", (e) => {
     mNav.classList.remove("open");
     navBtn.classList.remove("nav_btn_active");
+    document.querySelector("body").classList.remove("fixed");
   });
 });
 
@@ -47,10 +49,16 @@ window.addEventListener("scroll", () => {
 
   prevScrollTop = currScrollTop;
 
-  if (currScrollTop > aboutTop) {
+  if (currScrollTop > aboutTop - 80) {
     document.querySelector("header").classList.add("active");
   } else {
     document.querySelector("header").classList.remove("active");
+  }
+
+  if (currScrollTop > document.querySelector(".contact").offsetTop - 80) {
+    document.querySelector("header").classList.remove("active");
+  } else {
+    document.querySelector("header").classList.add("active");
   }
 
   scrollProgress();
@@ -63,10 +71,30 @@ function scrollProgress() {
       window.pageYOffset) +
     window.innerHeight / 2;
 
+  // content
+
+  document.querySelectorAll(".content").forEach((element, index) => {
+    if (scrollTop >= element.offsetTop) {
+      document.querySelectorAll(".nav li").forEach((li) => {
+        li.classList.remove("active");
+      });
+      document.querySelectorAll(".mNav li").forEach((li) => {
+        li.classList.remove("active");
+      });
+
+      document
+        .querySelector(".nav li:nth-child(" + (index + 1) + ")")
+        .classList.add("active");
+      document
+        .querySelector(".mNav li:nth-child(" + (index + 1) + ")")
+        .classList.add("active");
+    }
+  });
+
   // content_item
-  document.querySelectorAll(".content_item").forEach((el) => {
-    if (scrollTop > el.offsetTop) {
-      el.classList.add("show");
+  document.querySelectorAll(".content_item").forEach((item) => {
+    if (scrollTop > item.offsetTop) {
+      item.classList.add("show");
     }
   });
 }
