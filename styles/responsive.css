@@ -35,8 +35,6 @@
     width: 1440px;
     margin: 0 auto;
   }
-
-  
 }
 
 @media (min-width: 1041px) {
@@ -46,11 +44,6 @@
 
   .nav_btn {
     display: none;
-  }
-
-  .form_container {
-    max-width: 580px;
-    margin: 0 auto;
   }
 }
 
@@ -135,11 +128,6 @@
 
   .about_text div div {
     display: none;
-  }
-
-  .form_container {
-    max-width: 580px;
-    margin: 0 auto;
   }
 }
 

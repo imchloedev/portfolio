@@ -289,7 +289,7 @@ main {
 
 .content_item {
   opacity: 0;
-  transition: 0.8s ease-in-out;
+  transition: 0.5s ease-in-out;
   transform: translateY(200px);
 }
 
@@ -358,54 +358,71 @@ main {
   font-family: "Object Sans";
 }
 
-.form_container {
-  padding-top: 60px;
+.social_container {
+  padding-top: 40px;
+  display: flex;
+  align-items: center;
 }
 
-.form_container div:not(:last-child) {
-  padding-bottom: 30px;
+.social_container div:not(:last-child) {
+  margin-right: 20px;
 }
 
-.form_container input {
-  width: 100%;
-  border: 1px solid #848484;
-  padding: 16px 20px;
-  border-radius: 5px;
-}
-
-.form_container input::placeholder {
-  color: #888;
-}
-
-.form_container input:focus,
-.form_container textarea:focus {
-  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
-}
-
-.cMessage textarea {
-  width: 100%;
-  resize: none;
-  padding: 16px 20px;
-  border-radius: 5px;
-}
-
-.cMessage textarea::placeholder {
-  color: #888;
-}
-
-.cSendBtn button {
-  width: 180px;
+.social_container div a {
   display: block;
-  margin: 0 auto;
-  background-color: #333;
-  padding: 16px 20px;
-  border-radius: 5px;
-  text-transform: uppercase;
-  color: white;
+  font-family: "Object Sans";
+}
+
+.social_container div a span {
+  visibility: hidden;
+}
+
+.gmail a {
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 10px 20px;
   transition: 0.3s;
 }
 
-.cSendBtn button:hover {
-  color: #333;
-  background-color: #dedede;
+.gmail a:hover {
+  background-color: #333;
+  color: white;
+}
+
+.github a {
+  width: 40px;
+  height: 40px;
+  background: url(../images/github.png) no-repeat;
+  background-size: 30px 30px;
+  background-position: center center;
+}
+
+.velog a {
+  width: 40px;
+  height: 40px;
+  background: url(../images/velog.png) no-repeat;
+  background-size: 30px 30px;
+  background-position: center center;
+}
+
+.linkedin a {
+  width: 40px;
+  height: 40px;
+  background: url(../images/linkedin.png) no-repeat;
+  background-size: 30px 30px;
+  background-position: center center;
+}
+
+footer {
+  border-top: 1px solid #eee;
+}
+
+.footer_wrapper {
+  padding: 80px 32px;
+}
+
+.footer_wrapper p {
+  text-align: center;
+  color: #777;
+  font-family: "Object Sans";
 }

@@ -69,7 +69,8 @@ img {
   width: 50px;
 }
 
-input, textarea {
+input,
+textarea {
   font-family: "Object Sans";
   outline: none;
   background-color: transparent;
