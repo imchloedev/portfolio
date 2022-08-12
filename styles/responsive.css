@@ -1,3 +1,41 @@
+@media (min-width: 1440px) {
+  .header_wrapper {
+    width: 1440px;
+    margin: 0 auto;
+  }
+
+  .main_wrapper {
+    width: 1440px;
+    margin: 0 auto;
+  }
+
+  .main_text h2 {
+    font-size: 85.2px;
+  }
+
+  .main_text p {
+    font-size: 95.2px;
+  }
+
+
+  .about_wrapper {
+    width: 1440px;
+    margin: 0 auto;
+  }
+  
+  .projects_wrapper {
+    width: 1440px;
+    margin: 0 auto;
+  }
+
+  .numberList {
+    font-size: 115.2px”;
+  }
+}
+
+
+
+
 @media (min-width: 1041px) {
   .mNav {
     display: none;
@@ -106,6 +144,6 @@
   }
 
   .numberList {
-    font-size: 58px;
+    /* font-size: 58px; */
   }
 }

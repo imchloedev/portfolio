@@ -33,8 +33,16 @@ h4 {
   font-size: 18px;
 }
 
-h1, h2, h3, h4 {
+h5 {
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4 {
   text-transform: uppercase;
+  line-height: normal;
 }
 
 a {
@@ -56,5 +64,3 @@ ul li {
 img {
   width: 50px;
 }
-
-

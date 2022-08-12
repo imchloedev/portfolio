@@ -1,3 +1,4 @@
+// loader
 function isLoading() {
   setTimeout(() => {
     document.querySelector(".loader").classList.add("remove");
@@ -7,6 +8,7 @@ function isLoading() {
 
 isLoading();
 
+// mNav Btn
 let navBtn = document.querySelector(".nav_btn button");
 let mNav = document.querySelector(".mNav");
 
@@ -22,6 +24,7 @@ document.querySelectorAll(".mNav ul li a").forEach((el) => {
   });
 });
 
+// main/scrollBtn
 let scrollBtn = document.querySelector(".scroll_btn");
 let aboutTop = document.querySelector(".about").offsetTop;
 
@@ -29,6 +32,7 @@ scrollBtn.addEventListener("click", () => {
   window.scrollTo(0, aboutTop);
 });
 
+// scroll event
 let prevScrollTop = window.pageYOffset;
 
 window.addEventListener("scroll", () => {
@@ -63,8 +67,6 @@ function scrollProgress() {
   document.querySelectorAll(".content_item").forEach((el) => {
     if (scrollTop > el.offsetTop) {
       el.classList.add("show");
-    } else {
-      el.classList.remove("show");
     }
   });
 }
