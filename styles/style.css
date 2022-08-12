@@ -361,11 +361,17 @@ main {
 .social_container {
   padding-top: 40px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
+.social_container div {
+  flex-shrink: 0;
+  padding: 10px 20px 10px 0;
+}
+
 .social_container div:not(:last-child) {
-  margin-right: 20px;
+  /* margin-right: 20px; */
 }
 
 .social_container div a {
