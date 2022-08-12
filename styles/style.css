@@ -389,6 +389,17 @@ main {
   color: white;
 }
 
+.gmail a::after {
+  content: "";
+  margin-left: 10px;
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  background: url(../images/gmail.png) no-repeat;
+  background-position: right;
+  background-size: 14px 18px;
+}
+
 .github a {
   width: 40px;
   height: 40px;
