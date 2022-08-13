@@ -63,7 +63,9 @@ function navScrollProgress() {
       window.pageYOffset) +
     window.innerHeight / 10;
 
-  document.querySelectorAll(".content").forEach((element, index) => {
+  let content = document.querySelectorAll(".content");
+
+  content.forEach((element, index) => {
     if (scrollTop >= element.offsetTop) {
       document.querySelectorAll(".nav li").forEach((li) => {
         li.classList.remove("active");
@@ -81,13 +83,13 @@ function navScrollProgress() {
     }
   });
 
-  if (scrollTop > document.querySelector(".about").offsetTop) {
+  if (scrollTop > content[1].offsetTop) {
     document.querySelector("header").classList.add("active");
   } else {
     document.querySelector("header").classList.remove("active");
   }
 
-  if (scrollTop > document.querySelector(".contact").offsetTop) {
+  if (scrollTop > content[3].offsetTop) {
     document.querySelector("header").classList.remove("active");
   }
 }
