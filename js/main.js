@@ -108,8 +108,12 @@ function projectReveal() {
   document.querySelectorAll(".content_item").forEach((item) => {
     if (scrollTop > item.offsetTop) {
       item.classList.add("show");
+    } else {
+      item.classList.remove("show");
     }
   });
 }
+
+
 
 // contact
