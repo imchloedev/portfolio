@@ -113,7 +113,3 @@ function projectReveal() {
     }
   });
 }
-
-
-
-// contact
